@@ -2,82 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>NYC CLEANNESS COMPLAINT REPORT 2024</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
   <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/keen-dashboards.css" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Lora:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   <style>
     body {
       font-family: 'Open Sans', sans-serif;
       background-color: #f8f9fa;
-      color: #333;
+      color: #212529;
+      margin: 0;
+      padding: 0;
     }
 
     .navbar {
       background-color: #343a40;
-      padding: 20px;
-      margin-bottom: 20px;
+      padding: 1rem;
     }
 
-    .navbar-brand {
-      color: #fff;
+    .navbar-brand1 {
+      font-size: 30pt;
       text-align: center;
-      font-size: 24pt;
-      font-weight: 700;
-      margin: 0;
+      color: #fff;
+      margin-bottom: 0;
     }
 
     .navbar-brand2 {
-      font-size: 16pt;
-      margin: 10px 0;
-      color: #ffffff;
+      font-size: 18pt;
+      text-align: center;
+      color: #ced4da;
+      margin-top: 0.5rem;
     }
 
     .chart-wrapper {
-      background-color: #ffffff;
+      background: #ffffff;
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       margin-bottom: 20px;
       padding: 15px;
     }
 
     .chart-title {
-      font-size: 18pt;
-      font-weight: 600;
-      margin-bottom: 10px;
-      color: #007bff;
+      font-weight: bold;
+      margin-bottom: 15px;
+      font-size: 16pt;
+      color: #495057;
     }
 
-    .chart-map, .chart-stage {
-      border: 1px solid #e2e2e2;
-      border-radius: 5px;
-      padding: 5px;
-      background-color: #f8f9fa;
+    .navbar-brand {
+      text-align: center;
+      margin: 1rem 0;
+      font-size: 14pt;
+      color: #212529;
+    }
+
+    iframe {
+      border: none;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    iframe:hover {
+      transform: scale(1.02);
     }
 
     .footer {
       text-align: center;
-      font-size: 12pt;
-      color: #666;
       margin-top: 20px;
+      color: #6c757d;
+      font-size: 12pt;
     }
   </style>
 </head>
-
 <body class="application">
-
-  <nav class="navbar justify-content-center navbar-inverse navbar-fixed-top">
+  <div class="navbar justify-content-center navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
-      <div class="navbar-brand">
+      <div class="navbar-brand navbar-brand1">
         CLEANNESS IN NYC THROUGH LENS OF COMPLAINTS
       </div>
     </div>
-  </nav>
-
+  </div>
+  
   <div class="container-fluid">
     <div class="navbar-brand navbar-brand2">
-      What, When, Where, and How Good or Bad About Sanitation in NYC
+      What, When, Where and How Good or Bad About Sanitation in NYC
     </div>
   </div>
 
@@ -86,16 +95,16 @@
       <div class="navbar-brand">
         WHEN - SANITATION COMPLAINTS OVER THE TIME (2010 - 2024)
       </div>
-      <div class="col-sm-12">
+      <div class="col-sm-12 col-md-12">
         <div class="chart-wrapper">
           <div class="chart-title">
             Overall Cleanliness Related Complaint Volume Across The Past One and Half Decade (Q1-2010 - Q3-2024)
           </div>
           <div class="chart-stage">
-            <iframe width="100%" height="450px" frameborder="0" scrolling="no" src="layouts/two-and-one/ComplaintTS_Q12014_Q32024_qtrs.html"></iframe>
+            <iframe width="100%" height="450px" src="layouts/two-and-one/ComplaintTS_Q12014_Q32024_qtrs.html"></iframe>
           </div>
         </div>
-      </div>  
+      </div>
     </div>
 
     <div class="row">
@@ -108,29 +117,29 @@
             Complaint Types by Community District (2024)
           </div>
           <div class="chart-map">
-            <iframe width="100%" height="100%" frameborder="0" scrolling="no" src="layouts/two-and-one/index_d3.html" onload="this.style.height=this.contentDocument.body.scrollHeight + 'px';"></iframe>
+            <iframe width="100%" height="100%" src="layouts/two-and-one/index_d3.html" onload="this.style.height=this.contentDocument.body.scrollHeight + 'px';"></iframe>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="chart-wrapper">
-          <div class="chart-title">
-            Top 10 Community Districts by Complaint Volume YR 2024 ONLY
-          </div>
-          <div class="chart-stage">
-            <iframe width="100%" height="350px" frameborder="0" scrolling="no" src="layouts/two-and-one/Complaints_CD_Top10.html"></iframe>
+      
+      <div class="row">
+        <div class="col-sm-12 col-md-12">
+          <div class="chart-wrapper">
+            <div class="chart-title">
+              Top 10 Community Districts by Complaint Volume YR 2024 ONLY
+            </div>
+            <div class="chart-stage">
+              <iframe width="100%" height="350px" src="layouts/two-and-one/Complaints_CD_Top10.html"></iframe>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <footer class="footer">
+  <div class="footer">
     <p class="small text-muted">Built by Feng Guo</p>
-  </footer>
+  </div>
 
   <script type="text/javascript" src="assets/lib/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -146,88 +155,9 @@
       readKey: "3f324dcb5636316d6865ab0ebbbbc725224c7f8f3e8899c7733439965d6d4a2c7f13bf7765458790bd50ec76b4361687f51cf626314585dc246bb51aeb455c0a1dd6ce77a993d9c953c5fc554d1d3530ca5d17bdc6d1333ef3d8146a990c79435bb2c7d936f259a22647a75407921056"
     });
 
-    Keen.ready(function(){
-      var pageviews_timeline = new Keen.Query("count", {
-        eventCollection: "pageviews",
-        interval: "hourly",
-        groupBy: "user.device_info.browser.family",
-        timeframe: {
-          start: "2014-05-04T00:00:00.000Z",
-          end: "2014-05-05T00:00:00.000Z"
-        }
-      });
-      client.draw(pageviews_timeline, document.getElementById("chart-01"), {
-        chartType: "areachart",
-        title: false,
-        height: 250,
-        width: "auto",
-        chartOptions: {
-          chartArea: {
-            height: "85%",
-            left: "5%",
-            top: "5%",
-            width: "80%"
-          },
-          isStacked: true
-        }
-      });
-      
-      var pageviews_static = new Keen.Query("count", {
-        eventCollection: "pageviews",
-        groupBy: "user.device_info.browser.family",
-        timeframe: {
-          start: "2014-05-01T00:00:00.000Z",
-          end: "2014-05-05T00:00:00.000Z"
-        }
-      });
-      client.draw(pageviews_static, document.getElementById("chart-02"), {
-        chartType: "piechart",
-        title: false,
-        height: 250,
-        width: "auto",
-        chartOptions: {
-          chartArea: {
-            height: "85%",
-            left: "5%",
-            top: "5%",
-            width: "100%"
-          },
-          pieHole: .4
-        }
-      });
-      
-      var impressions_timeline = new Keen.Query("count", {
-        eventCollection: "impressions",
-        groupBy: "ad.advertiser",
-        interval: "hourly",
-        timeframe: {
-          start: "2014-05-04T00:00:00.000Z",
-          end: "2014-05-05T00:00:00.000Z"
-        }
-      });
-      client.draw(impressions_timeline, document.getElementById("chart-03"), {
-        chartType: "columnchart",
-        title: false,
-        height: 250,
-        width: "auto",
-        chartOptions: {
-          chartArea: {
-            height: "75%",
-            left: "10%",
-            top: "5%",
-            width: "60%"
-          },
-          bar: {
-            groupWidth: "85%"
-          },
-          isStacked: true
-        }
-      });
-
-      var impressions_timeline_by_device = new Keen.Query("count", {
-        eventCollection: "impressions",
-        groupBy: "user.device_info.device.family",
-        interval: "hourly",
-        timeframe: {
-          start: "2014-05-04T00:00:00.000Z",
-          end: "2014-05-05T
+    Keen.ready(function() {
+      // Your Keen.js queries go here...
+    });
+  </script>
+</body>
+</html>
