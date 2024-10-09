@@ -118,10 +118,7 @@
 				  <div class="chart-stage">
 						<iframe width="100%" height="450px" frameborder="0" scrolling="no" src="layouts/two-and-one/ComplaintTS_Q12014_Q32024_qtrs.html"></iframe>
 				  </div>
-				  <!-- <div class="chart-notes">
-					The greatest year-to-year increase in total number of permits issued occurred from 2003 to 2004 where New Building permits increased by 20% and Demolitions increased by 27%. This upward surge continued through 2005, but was followed by a six year period of decline. However, since 2013, New Building and Demolition permits have again steadily increased.
-
-				  </div> -->
+				
 			</div>
 		</div>  
 	
@@ -196,9 +193,7 @@ var client = new Keen({
 
 Keen.ready(function(){
 
-  // ----------------------------------------
-  // Sample one
-  // ----------------------------------------
+  
   var pageviews_timeline = new Keen.Query("count", {
     eventCollection: "pageviews",
     interval: "hourly",
@@ -223,14 +218,7 @@ Keen.ready(function(){
       isStacked: true
     }
   });
-  // ----------------------------------------
-  //  End sample one
-  // ----------------------------------------
-
-
-  // ----------------------------------------
-  // Sample two
-  // ----------------------------------------
+  
   var pageviews_static = new Keen.Query("count", {
     eventCollection: "pageviews",
     groupBy: "user.device_info.browser.family",
@@ -254,13 +242,7 @@ Keen.ready(function(){
       pieHole: .4
     }
   });
-  // ----------------------------------------
-  // End sample two
-  // ----------------------------------------
-
-  // ----------------------------------------
-  // Sample three
-  // ----------------------------------------
+  
   var impressions_timeline = new Keen.Query("count", {
     eventCollection: "impressions",
     groupBy: "ad.advertiser",
@@ -288,13 +270,8 @@ Keen.ready(function(){
       isStacked: true
     }
   });
-  // ----------------------------------------
-  // End sample three
-  // ----------------------------------------
 
-  // ----------------------------------------
-  // Sample four
-  // ----------------------------------------
+
   var impressions_timeline_by_device = new Keen.Query("count", {
     eventCollection: "impressions",
     groupBy: "user.device_info.device.family",
@@ -322,13 +299,7 @@ Keen.ready(function(){
       isStacked: true
     }
   });
-  // ----------------------------------------
-  // End sample four
-  // ----------------------------------------
 
-  // ----------------------------------------
-  // Sample five
-  // ----------------------------------------
   var impressions_timeline_by_country = new Keen.Query("count", {
     eventCollection: "impressions",
     groupBy: "user.geo_info.country",
@@ -356,9 +327,7 @@ Keen.ready(function(){
       isStacked: true
     }
   });
-  // ----------------------------------------
-  // End sample five
-  // ----------------------------------------
+  
   var impressions_timeline_by_country = new Keen.Query("count", {
     eventCollection: "impressions",
     groupBy: "user.geo_info.country",
